@@ -1,6 +1,18 @@
 # 前端代码最佳实践
 
 ## JS
+### 引号与分号
+``` js
+const a = "x";
+const b = 'x'
+```
+
+建议
+``` js
+const a = 'x'
+const b = 'y'
+```
+
 ### if 条件判断
 ``` js
 if (a === true) {
@@ -29,6 +41,8 @@ if (a == 1) {
   doThat()
 } else if (a == 3) {
   doWhatever()
+} else {
+  doNothing()
 }
 ```
 
@@ -43,6 +57,9 @@ switch (a) {
     break
   case 3:
     doWhatever()
+    break
+  default:
+    doNothing()
 }
 ```
 
@@ -61,6 +78,54 @@ if (condition) {
 const a = condition ? 1 : 0
 ```
 
+### if 条件判断 4
+``` js
+if (!a) {
+  if (b) {
+    if (!c) {
+      doThis()
+    } else {
+      doThat()
+    }
+  } else {
+    doWhatever()
+  }
+} else {
+  doNothing()
+}
+```
+
+建议
+``` js
+if (a) {
+  doNothing()
+} else {
+  if (b) {
+    if (c) {
+      doThat()
+    } else {
+      doThis()
+    }
+  } else {
+    doWhatever()
+  }
+}
+```
+
+### indexOf
+``` js
+const stringContainX = a.indexOf('x')
+const arrayContainX = b.indexOf('y')
+```
+
+建议
+``` js
+const stringContainX = a.includes('x')
+const stringContainX = a.startsWith('x')
+const stringContainX = a.endsWith('x')
+const arrayContainX = b.includes('y')
+```
+
 ### 复杂类型的引用传值
 ``` js
 const a = {x: 1}
@@ -75,16 +140,17 @@ const b = JSON.parse(JSON.stringify(a))
 ```
 
 ## React
-1. [React Hook](https://lexiangla.com/docs/3babd20e0bd011ec9abb6e2d8f959e52?company_from=385abcf0dd9d11e8a11752540005f435)
+1. [React Hook](https://lexiangla.com/docs/3babd20e0bd011ec9abb6e2d8f959e52?company_from=385abcf0dd9d11e8a11752540005f435)[【备用链接】](https://github.com/TwoNingMengTea/reack-hook/blob/master/react-hooks.md)
 2. [React关于shouldComponentUpdate、PureComponent和React.memo](https://lexiangla.com/docs/4136d1300bd811ecb0be32c75543b97e?company_from=385abcf0dd9d11e8a11752540005f435)
 
 ## Vue
 1. [vue之keep-alive的应用](https://lexiangla.com/docs/5672c9420bd211ec9efa762d8987966a?company_from=385abcf0dd9d11e8a11752540005f435)
 
-## 通用
+## 综合
 ### 组件、代码复用
 1. 能复用尽量复用，避免重复造轮子
-2. 公共模块尽量提取出来
+2. 通用模块、组件、方法等尽量提取出来
+3. 公共代码是可以修改的，但要谨慎考虑各种情况。
 
 ### 数据和模板分离
 1. 多个相同的 HTML 结构尽量使用数据循环输出模板内容
