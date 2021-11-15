@@ -126,17 +126,53 @@ const stringContainX = a.endsWith('x')
 const arrayContainX = b.includes('y')
 ```
 
+### 数组方法的选择
+``` js
+const a = array.forEach(...)
+array.map(...)
+```
+
+建议
+``` js
+array.forEach(...)
+const b = array.map(...)
+```
+
+### 删除数组元素
+``` js
+array.forEach((item, index) => {
+  if (index % 2 === 0) {
+    array.splice(index, 1)
+  }
+})
+```
+
 ### 复杂类型的引用传值
 ``` js
 const a = {x: 1}
 const b = a
 b.x = 2
-console.log(a)
+console.log(a.x)
 ```
 
 建议
 ``` js
+// 深度克隆
 const b = JSON.parse(JSON.stringify(a))
+```
+
+### 运行时报错：对象为空
+*Can not read property x of undefined*
+``` js
+const b = a.x
+```
+
+建议
+``` js
+const b = a ? a.x : null
+
+// or
+const b = a?.x
 ```
 
 ## React
@@ -153,4 +189,16 @@ const b = JSON.parse(JSON.stringify(a))
 3. 公共代码是可以修改的，但要谨慎考虑各种情况。
 
 ### 数据和模板分离
-1. 多个相同的 HTML 结构尽量使用数据循环输出模板内容
+1. 多个相同或类似的 HTML 结构尽量使用数据循环输出模板内容
+
+### 问题解决
+1. 遇到问题先自行思考或搜索
+2. 比报错更重要的是错误信息
+3. 一段时间内无法解决的问题及时向组长/主管求助
+4. 不要用猥琐的方式（奇巧淫技）解决问题
+
+## 参考资料
+1. [编码规范 by @mdo](https://codeguide.bootcss.com/)
+2. [ES6 入门教程 by 阮一峰](https://es6.ruanyifeng.com/)
+3. [Airbnb JavaScript 风格指南](https://lin-123.github.io/javascript/)
+4. [Javascript 秘密花园](http://bonsaiden.github.io/JavaScript-Garden/zh/)

@@ -32,7 +32,7 @@
 ## 解决冲突
 经过沟通保留双方需要的代码片段
 
-## [代码回滚](https://lexiangla.com/docs/909861520afd11ec8b19568564ad7a16?company_from=385abcf0dd9d11e8a11752540005f435)
+## [代码回滚](https://lexiangla.com/docs/909861520afd11ec8b19568564ad7a16?company_from=385abcf0dd9d11e8a11752540005f435)[【备用链接】](https://fe.anchnet.com/2021/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB%E4%B9%8BGit%E6%92%A4%E9%94%80%E6%8F%90%E4%BA%A4/)
 ### git reset xxx / git reset --hard xxx
 回滚到之前的某个版本
 
@@ -73,3 +73,6 @@ node_modules
 2. Git 操作出现问题或意料之外的情况时，停止操作、保留命令行并及时向组长/主管求助。
 3. git push -f 强制推送很危险，绝大部分时候不允许使用。
 4. 在进行有风险、没有把握的操作时，先对分支进行备份。
+
+## 参考资料
+1. [git 使用简易指南](https://www.bootcss.com/p/git-guide/)
