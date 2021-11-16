@@ -1,18 +1,6 @@
 # 前端代码最佳实践
 
 ## JS
-### 引号与分号
-``` js
-const a = "x";
-const b = 'x'
-```
-
-建议
-``` js
-const a = 'x'
-const b = 'y'
-```
-
 ### if 条件判断
 ``` js
 if (a === true) {
@@ -69,13 +57,13 @@ let a
 if (condition) {
   a = 1
 } else {
-  a = 0
+  a = 2
 }
 ```
 
 建议
 ``` js
-const a = condition ? 1 : 0
+const a = condition ? 1 : 2
 ```
 
 ### if 条件判断 4
@@ -185,7 +173,7 @@ const b = a?.x
 ## 综合
 ### 组件、代码复用
 1. 能复用尽量复用，避免重复造轮子
-2. 通用模块、组件、方法等尽量提取出来
+2. 可以复用的模块、组件、方法等尽量提取出来
 3. 公共代码是可以修改的，但要谨慎考虑各种情况。
 
 ### 数据和模板分离
@@ -193,12 +181,15 @@ const b = a?.x
 
 ### 问题解决
 1. 遇到问题先自行思考或搜索
-2. 比报错更重要的是错误信息
+2. 比报错更重要的是具体的错误信息
 3. 一段时间内无法解决的问题及时向组长/主管求助
 4. 不要用猥琐的方式（奇巧淫技）解决问题
+
+### 代码可读性
+1. 代码可读性在某种程度上比代码运行效率更重要，为了可读性降低一点效率是可以接受的。
+2. 对代码进行必要的注释，特别是核心模块、公共组件、通用方法、重要参数等。
 
 ## 参考资料
 1. [编码规范 by @mdo](https://codeguide.bootcss.com/)
 2. [ES6 入门教程 by 阮一峰](https://es6.ruanyifeng.com/)
-3. [Airbnb JavaScript 风格指南](https://lin-123.github.io/javascript/)
-4. [Javascript 秘密花园](http://bonsaiden.github.io/JavaScript-Garden/zh/)
+3. [Javascript 秘密花园](http://bonsaiden.github.io/JavaScript-Garden/zh/)

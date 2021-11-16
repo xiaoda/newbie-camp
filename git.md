@@ -13,6 +13,9 @@
 ### git add . / git add xxx
 添加到暂存区
 
+### git status
+查看当前状态
+
 ### git commit -m '解决 xxx 问题'
 提交代码
 
@@ -28,6 +31,9 @@
 
 ### git rebase xxx
 另一种合并分支的方式：Reapply commits on top of another base tip
+
+### git branch -d xxx
+删除分支
 
 ## 解决冲突
 经过沟通保留双方需要的代码片段
@@ -46,16 +52,13 @@
 ### git branch / git branch -r
 查看或创建分支
 
-### git status
-查看当前状态
-
 ### git log
 查看提交日志
 
 ### git tag
 查看或创建标签
 
-### git blame xxx
+### git blame
 查看文件修改记录
 
 ## .gitignore
@@ -63,8 +66,10 @@ gitignore 的作用是帮助我们在执行 git add 时将我们指定的一些�
 
 ```
 node_modules
+/build
 /dist
 /.idea
+/.vscode
 .DS_Store
 ```
 
