@@ -7,4 +7,4 @@
 3. [前端开发实用工具](tool.md)
 4. [前端代码最佳实践](code.md)
 5. [前后端联调](api.md)
-6. [前端进阶课程](advanced.md)
+6. [前端进阶课题](advance.md)

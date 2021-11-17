@@ -58,6 +58,9 @@
 ### git tag
 查看或创建标签
 
+### git stash
+暂存代码
+
 ### git blame
 查看文件修改记录
 
