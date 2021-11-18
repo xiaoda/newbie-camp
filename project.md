@@ -1,5 +1,4 @@
 # 前端项目注意事项
-
 ## 项目依赖
 ### [package.json](https://docs.npmjs.com/cli/v7/configuring-npm/package-json/)
 每个项目的根目录下面，一般都有一个 package.json 文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）。npm install 命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。
