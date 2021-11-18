@@ -1,5 +1,5 @@
 # Newbie Camp
-前端新人培训
+前端基础培训
 
 ## 课程列表
 1. [Git](git.md)
