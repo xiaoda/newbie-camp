@@ -189,6 +189,7 @@ const b = a?.x
 2. 对代码进行必要的注释，特别是核心模块、公共组件、通用方法、重要参数等。
 
 ## 参考资料
-1. [编码规范 by @mdo](https://codeguide.bootcss.com/)
-2. [ES6 入门教程 by 阮一峰](https://es6.ruanyifeng.com/)
-3. [Javascript 秘密花园](http://bonsaiden.github.io/JavaScript-Garden/zh/)
+1. [内部基础规范](https://gitlab.51idc.com/frontend/standard-summary/-/blob/master/%E5%9F%BA%E7%A1%80%E8%A7%84%E8%8C%83.md)
+2. [编码规范 by @mdo](https://codeguide.bootcss.com/)
+3. [ES6 入门教程 by 阮一峰](https://es6.ruanyifeng.com/)
+4. [Javascript 秘密花园](http://bonsaiden.github.io/JavaScript-Garden/zh/)
